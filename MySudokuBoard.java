@@ -118,13 +118,25 @@ public class MySudokuBoard {
       else {
          for(int r = 0; r < myBoard.length; r++) {
             for(int c = 0; c < myBoard[0].length; c++) {
-               for(char val = '1'; val < '9'; val++) {
-                  myBoard[r][c] += 1;
+               if(myBoard[r][c] == '.') { 
+                  for(char val = '1'; val < '9'; val++) {
+                     myBoard[r][c] = val;
+                     if(solve()) { return true; }
+                     myBoard[r][c] = '.';
+                   }
                }
             }
          }
          return false;
       }
    }
-
+   
+   // private boolean isEmpty() {
+//       for(int r = 0; r < myBoard.length; r++) {
+//          for(int c = 0; c < myBoard[0].length; c++) {
+//             if(myBoard[r][c] == '.') { return true; }
+//          }
+//       }
+//       return false;
+//    }
 }
