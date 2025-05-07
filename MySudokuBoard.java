@@ -111,7 +111,9 @@ public class MySudokuBoard {
    }
    
    public boolean solve() {
-      if(isSolved()) { return true; }
+      if(isSolved()) { 
+         return true; 
+      }
       else if(!isValid()) {
          return false;
       }
@@ -119,7 +121,7 @@ public class MySudokuBoard {
          for(int r = 0; r < myBoard.length; r++) {
             for(int c = 0; c < myBoard[0].length; c++) {
                if(myBoard[r][c] == '.') { 
-                  for(char val = '1'; val < '9'; val++) {
+                  for(char val = '1'; val <= '9'; val++) {
                      myBoard[r][c] = val;
                      if(solve()) { return true; }
                      myBoard[r][c] = '.';
