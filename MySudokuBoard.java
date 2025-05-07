@@ -109,5 +109,22 @@ public class MySudokuBoard {
       }
       return result;
    }
+   
+   public boolean solve() {
+      if(isSolved()) { return true; }
+      else if(!isValid()) {
+         return false;
+      }
+      else {
+         for(int r = 0; r < myBoard.length; r++) {
+            for(int c = 0; c < myBoard[0].length; c++) {
+               for(char val = '1'; val < '9'; val++) {
+                  myBoard[r][c] += 1;
+               }
+            }
+         }
+         return false;
+      }
+   }
 
 }
