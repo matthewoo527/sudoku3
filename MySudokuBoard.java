@@ -111,24 +111,33 @@ public class MySudokuBoard {
    }
    
    public boolean solve() {
+      // Check if the board is already solved
       if(isSolved()) { 
          return true; 
       }
+      // Check if the board is valid
       else if(!isValid()) {
          return false;
       }
+      // If it is not solved and it is valid, then start trying to solve the board
       else {
+         // Go through the board
          for(int r = 0; r < myBoard.length; r++) {
             for(int c = 0; c < myBoard[0].length; c++) {
+               // If the spot is empty'.'
                if(myBoard[r][c] == '.') { 
+                  // Try the numbers 1 to 9
                   for(char val = '1'; val <= '9'; val++) {
                      myBoard[r][c] = val;
+                     // Calling the solve method it self to see if it is solved
                      if(solve()) { return true; }
+                     // Check the spot back to empty so it can try the next number
                      myBoard[r][c] = '.';
                    }
                }
             }
          }
+         // If the board cannot solve at all, return false
          return false;
       }
    }
