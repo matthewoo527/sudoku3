@@ -1,4 +1,4 @@
-public class SudokuCheckerEngineV2 {
+public class SudokuCheckerEngine {
 
    public static void main(String[] args) {
       // Note that here I am calling the board object MySudokuBoard
