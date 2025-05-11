@@ -19,3 +19,40 @@ public class SudokuSolverEngine {
       
    }
 }
+
+/*
+# PROGRAM OUTPUT
+
+  ----jGRASP exec: java SudokuSolverEngine
+ Initial board
+ My Board:
+ 
+ .34678912
+ .72195348
+ 198342567
+ ..9.61423
+ .26853791
+ .13924.56
+ .61537284
+ .8.419635
+ 345.86179
+ 
+ 
+ Solving board...SOLVED in 0.890 seconds.
+ 
+ My Board:
+ 
+ 534678912
+ 672195348
+ 198342567
+ 859761423
+ 426853791
+ 713924856
+ 961537284
+ 287419635
+ 345286179
+ 
+ 
+  ----jGRASP: Operation complete.
+
+*/
